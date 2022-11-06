@@ -8,7 +8,7 @@ This is a conversion of QR-Policejob
 3. Open `jobs.lua`
 4. 3. Add sheriff job use example below;
 
-['sheriff'] = {
+`['sheriff'] = {
     label = 'Sheriffs Department',
     defaultDuty = true,
     offDutyPay = false,
@@ -32,6 +32,6 @@ This is a conversion of QR-Policejob
             payment = 100
         },
     },
-},
+},`
 
 5. restart your server!
