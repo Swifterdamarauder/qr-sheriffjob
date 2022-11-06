@@ -6,7 +6,7 @@ local ClosestSpike = nil
 local QRCore = exports['qr-core']:GetCoreObject()
 
 -- Functions
-local function GetClosestsheriffObject()
+local function GetClosestSheriffObject()
     local pos = GetEntityCoords(PlayerPedId(), true)
     local current = nil
     local dist = nil
@@ -79,7 +79,7 @@ RegisterNetEvent('sheriff:client:spawnPObj', function(item)
 end)
 
 RegisterNetEvent('sheriff:client:deleteObject', function()
-    local objectId, dist = GetClosestsheriffObject()
+    local objectId, dist = GetClosestSheriffObject()
     if dist < 5.0 then
         QRCore.Functions.Progressbar("remove_object", Lang:t('progressbar.remove_object'), 2500, false, true, {
             disableMovement = true,
