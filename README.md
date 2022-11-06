@@ -8,6 +8,7 @@ This is a conversion of QR-Policejob
 3. Open `jobs.lua`
 4. 3. Add sheriff job use example below;
 
+```
 ['sheriff'] = {
     label = 'New Charleston Sheriffs Department',
     defaultDuty = true,
@@ -33,5 +34,6 @@ This is a conversion of QR-Policejob
         },
     },
 },
+```
 
 5. restart your server!
