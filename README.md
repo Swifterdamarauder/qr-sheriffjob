@@ -6,7 +6,7 @@ This is a conversion of QR-Policejob
 1. Add this to the folder named `[framework]` or whatever folder contains all of your qrcore resources
 2. Go to `qr-core` folder then the `shared` folder
 3. Open `jobs.lua`
-4. 3. Add sheriff job use example below;
+4. Add sheriff job use example below;
 
 ```
 ['sheriff'] = {
