@@ -10,8 +10,8 @@ This is a conversion of QR-Policejob
 
 ['sheriff'] = {
     label = 'Sheriffs Department',
-    defaultDuty = true,
-    offDutyPay = false,
+        defaultDuty = true,
+        offDutyPay = false,
     grades = {
         ['0'] = {
             name = 'Deputy',
