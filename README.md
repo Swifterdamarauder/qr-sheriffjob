@@ -8,7 +8,7 @@ This is a conversion of QR-Policejob
 
 ```
 ['sheriff'] = {
-    label = 'New Charleston Sheriffs Department',
+    label = 'Sheriffs Department',
     defaultDuty = true,
     offDutyPay = false,
     grades = {
