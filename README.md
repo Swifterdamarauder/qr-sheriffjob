@@ -9,9 +9,9 @@ This is a conversion of QR-Policejob
 4. 3. Add sheriff job use example below;
 
 ['sheriff'] = {
-    label = 'Sheriffs Department',
-        defaultDuty = true,
-        offDutyPay = false,
+    label = 'New Charleston Sheriffs Department',
+    defaultDuty = true,
+    offDutyPay = false,
     grades = {
         ['0'] = {
             name = 'Deputy',
