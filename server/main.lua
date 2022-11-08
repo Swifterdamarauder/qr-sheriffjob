@@ -107,7 +107,7 @@ local function DnaHash(s)
 end
 
 -- Commands
-QRCore.Commands.Add("pobject", Lang:t("commands.place_object"), {{name = "type",help = Lang:t("info.poobject_object")}}, true, function(source, args)
+QRCore.Commands.Add("spobject", Lang:t("commands.place_object"), {{name = "type",help = Lang:t("info.poobject_object")}}, true, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     local type = args[1]:lower()
@@ -127,7 +127,7 @@ QRCore.Commands.Add("pobject", Lang:t("commands.place_object"), {{name = "type",
     
 end)
 
-QRCore.Commands.Add("cuff", Lang:t("commands.cuff_player"), {}, false, function(source, args)
+QRCore.Commands.Add("scuff", Lang:t("commands.cuff_player"), {}, false, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -137,18 +137,18 @@ QRCore.Commands.Add("cuff", Lang:t("commands.cuff_player"), {}, false, function(
     end
 end)
 
-QRCore.Commands.Add("escort", Lang:t("commands.escort"), {}, false, function(source, args)
+QRCore.Commands.Add("sescort", Lang:t("commands.escort"), {}, false, function(source, args)
     local src = source
     TriggerClientEvent("sheriff:client:EscortPlayer", src)
 end)
 
-QRCore.Commands.Add("callsign", Lang:t("commands.callsign"), {{name = "name", help = Lang:t('info.callsign_name')}}, false, function(source, args)
+QRCore.Commands.Add("scallsign", Lang:t("commands.callsign"), {{name = "name", help = Lang:t('info.callsign_name')}}, false, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     Player.Functions.SetMetaData("callsign", table.concat(args, " "))
 end)
 
-QRCore.Commands.Add("clearcasings", Lang:t("commands.clear_casign"), {}, false, function(source)
+QRCore.Commands.Add("sclearcasings", Lang:t("commands.clear_casign"), {}, false, function(source)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -158,7 +158,7 @@ QRCore.Commands.Add("clearcasings", Lang:t("commands.clear_casign"), {}, false, 
     end
 end)
 
-QRCore.Commands.Add("jail", Lang:t("commands.jail_player"), {{name = "id", help = Lang:t('info.player_id')}, {name = "time", help = Lang:t('info.jail_time')}}, true, function(source, args)
+QRCore.Commands.Add("sjail", Lang:t("commands.jail_player"), {{name = "id", help = Lang:t('info.player_id')}, {name = "time", help = Lang:t('info.jail_time')}}, true, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -174,7 +174,7 @@ QRCore.Commands.Add("jail", Lang:t("commands.jail_player"), {{name = "id", help 
     end
 end)
 
-QRCore.Commands.Add("unjail", Lang:t("commands.unjail_player"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
+QRCore.Commands.Add("sunjail", Lang:t("commands.unjail_player"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -185,7 +185,7 @@ QRCore.Commands.Add("unjail", Lang:t("commands.unjail_player"), {{name = "id", h
     end
 end)
 
-QRCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, function(source)
+QRCore.Commands.Add("sclearblood", Lang:t("commands.clearblood"), {}, false, function(source)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -195,7 +195,7 @@ QRCore.Commands.Add("clearblood", Lang:t("commands.clearblood"), {}, false, func
     end
 end)
 
-QRCore.Commands.Add("seizecash", Lang:t("commands.seizecash"), {}, false, function(source)
+QRCore.Commands.Add("sseizecash", Lang:t("commands.seizecash"), {}, false, function(source)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -205,7 +205,7 @@ QRCore.Commands.Add("seizecash", Lang:t("commands.seizecash"), {}, false, functi
     end
 end)
 
-QRCore.Commands.Add("sc", Lang:t("commands.softcuff"), {}, false, function(source)
+QRCore.Commands.Add("ssc", Lang:t("commands.softcuff"), {}, false, function(source)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     if Player.PlayerData.job.name == "sheriff" and Player.PlayerData.job.onduty then
@@ -215,7 +215,7 @@ QRCore.Commands.Add("sc", Lang:t("commands.softcuff"), {}, false, function(sourc
     end
 end)
 
-QRCore.Commands.Add("takedna", Lang:t("commands.takedna"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
+QRCore.Commands.Add("stakedna", Lang:t("commands.takedna"), {{name = "id", help = Lang:t('info.player_id')}}, true, function(source, args)
     local src = source
     local Player = QRCore.Functions.GetPlayer(src)
     local OtherPlayer = QRCore.Functions.GetPlayer(tonumber(args[1]))
